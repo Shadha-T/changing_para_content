@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+
+<body>
+
+
+
+    <style>
+        body {
+            background-color: #540a13;
+            color: #F5F5F5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            transition: 0.5s;
+        }
+
+        button{
+            border: 1px dashed  #F5F5F5;
+            background-color: transparent;
+            color: #F5F5F5;
+            padding:10px;
+            transition: 0.2s;
+            margin: 5px;
+
+        }
+        button:hover{
+            background-color: #F5F5F5;
+            color: #540a13;;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        img{
+            width: 100%;
+            max-height: 300px;
+            border-radius: 15px;
+        }
+
+    </style>
+    <h1>DOM Manipulation</h1>
+
+
+    <div class="" style="max-width: 500px;">
+        <!-- if click button change content -->
+        <!-- can use class name or id -->
+        <div class="" style="text-align: center;">
+            <button id="button1" >Change Image <b>src [ 1 ]</b></button>
+            <button id="button2" >Change Image <b>src [ 2 ]</b></button>
+            <button id="button3" >Change Image <b>src [ 3 ]</b></button>
+            <button id="button4" >Change Image <b>src [ 4 ]</b></button>
+        </div>
+        <!-- content -->
+        <div class="" style="margin-top: 20px;">
+            <img id="image" src="https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+
+        // step - 1
+        document.getElementById("button1") // id name "button"
+        document.getElementById("button2") // id name "button"
+        document.getElementById("button3") // id name "button"
+        document.getElementById("button4") // id name "button"
+        // step - 2
+        console.log(document.getElementById("button1"))
+        console.log(document.getElementById("button2"))
+        console.log(document.getElementById("button3"))
+        console.log(document.getElementById("button4"))
+        //step - 3
+        // declare a variable 
+        const button1 = document.getElementById("button1");
+        const button2 = document.getElementById("button2");
+        const button3 = document.getElementById("button3");
+        const button4 = document.getElementById("button4");
+        // step - 4
+        document.getElementById("image");
+        // step - 5
+        console.log(document.getElementById("image"))
+        //step - 6
+        // declare a variable 
+         const image = document.getElementById("image");
+
+        // finally click button , change image content
+        button1.addEventListener("click",function (params) {
+            image.src = 'https://images.pexels.com/photos/1379640/pexels-photo-1379640.jpeg?auto=compress&cs=tinysrgb&w=600'
+        }) 
+        button2.addEventListener("click",function (params) {
+            image.src = 'https://images.pexels.com/photos/1485894/pexels-photo-1485894.jpeg?auto=compress&cs=tinysrgb&w=600'
+        }) 
+        button3.addEventListener("click",function (params) {
+            image.src = 'https://images.pexels.com/photos/2246476/pexels-photo-2246476.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        }) 
+        button4.addEventListener("click",function (params) {
+            image.src = 'https://images.pexels.com/photos/1451567/pexels-photo-1451567.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        }) 
+        // addEventListener is method , 
+        //click is a event
+        // innerHTML = to use change content
+
+
+    </script>
+
+</body>
+
+</html>
